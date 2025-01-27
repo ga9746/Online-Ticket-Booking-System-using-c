@@ -1,134 +1,109 @@
-#include&lt;stdio.h&gt;
-int main()
-{
-printf(&quot;...\t\t\t\t\tSHANESREE TOURISM
-REGISTRATION\t\t\t\t\t...\n\n&quot;);
-printf(&quot;\n\n&quot;);
-int no_of_members,starting_date,returning_date,no_
-of_days,final,answer;
-printf(&quot;Enter the number of passengers : &quot;);
-scanf(&quot;%d&quot;,&amp;no_of_members);
-for(int i=1;i&lt;=no_of_members;i++)
-{
-char name[20],name1[20],gender[35]; int age;
-int a;
-double contact_number; printf(&quot;Enter First Name : &quot;);
-5
+#include <stdio.h>
 
-scanf(&quot;%s&quot;,name); printf(&quot;Enter Last Name : &quot;);
-scanf(&quot;%s&quot;,name1); printf(&quot;Enter gender :&quot;);
-scanf(&quot;%s&quot;,gender);
-printf(&quot;Enter age :&quot;); scanf(&quot;%d&quot;,&amp;age);
-printf(&quot;Enter contact number :
-&quot;);scanf(&quot;%lf&quot;,&amp;contact_number);
-printf(&quot;\n\t\t\t\tPASSENGER&#39;S NAME : %s
-%s\n&quot;,name,name1);
-printf(&quot;\t\t\t\tPASSENGER&#39;S GENDER :
-%s\n&quot;,gender);
-printf(&quot;\t\t\t\tPASSENGER&#39;S AGE :
-%d\n&quot;,age);
-printf(&quot;\t\t\t\tPASSENGER&#39;S CONTACT NUMBER :
-%0.0lf\n&quot;,contact_number);
+int main() {
+    printf("...\t\t\t\t\tSHANESREE TOURISM\n");
+    printf("REGISTRATION\t\t\t\t\t...\n\n\n");
+
+    int no_of_members, starting_date, returning_date, no_of_days, final = 0, answer;
+
+    printf("Enter the number of passengers: ");
+    scanf("%d", &no_of_members);
+
+    for (int i = 1; i <= no_of_members; i++) {
+        char name[20], name1[20], gender[10];
+        int age;
+        double contact_number;
+
+        printf("Enter First Name: ");
+        scanf("%s", name);
+
+        printf("Enter Last Name: ");
+        scanf("%s", name1);
+
+        printf("Enter Gender: ");
+        scanf("%s", gender);
+
+        printf("Enter Age: ");
+        scanf("%d", &age);
+
+        printf("Enter Contact Number: ");
+        scanf("%lf", &contact_number);
+
+        printf("\n\t\t\t\tPASSENGER'S NAME: %s %s\n", name, name1);
+        printf("\t\t\t\tPASSENGER'S GENDER: %s\n", gender);
+        printf("\t\t\t\tPASSENGER'S AGE: %d\n", age);
+        printf("\t\t\t\tPASSENGER'S CONTACT NUMBER: %.0lf\n", contact_number);
+    }
+
+    printf("\n\n....\t\t\t\tTOURIST DESTINATIONS\t\t\t\t....\n\n");
+    printf("\t\t\t\t 1. DELHI\n\t\t\t\t 2. KERALA\n");
+    printf("\t\t\t\t 3. ANDHRA PRADESH\n\t\t\t\t 4. KASHMIR\n");
+    printf("\t\t\t\t 5. GOA\n");
+
+    int choice;
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1) {
+        printf("You have selected DELHI.\n");
+        printf("...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n");
+        printf("Total Amount: 3000 (Without GST)\n");
+        printf("1. Travels: 700\n2. Foods: 1000\n3. Stays: 1300\n");
+        printf("4. Services: 300 (Not Compulsory)\n5. GST: 600\n");
+        final = 3600;
+    } else if (choice == 2) {
+        printf("You have selected KERALA.\n");
+        printf("...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n");
+        printf("Total Amount: 5000 (Without GST)\n");
+        printf("1. Travels: 2000\n2. Foods: 1400\n3. Stays: 1400\n");
+        printf("4. Services: 300 (Not Compulsory)\n5. GST: 1000\n");
+        final = 6000;
+    } else if (choice == 3) {
+        printf("You have selected ANDHRA PRADESH.\n");
+        printf("...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n");
+        printf("Total Amount: 5000 (Without GST)\n");
+        printf("1. Travels: 2000\n2. Foods: 1400\n3. Stays: 1400\n");
+        printf("4. Services: 300 (Not Compulsory)\n5. GST: 1000\n");
+        final = 6000;
+    } else if (choice == 4) {
+        printf("You have selected KASHMIR.\n");
+        printf("...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n");
+        printf("Total Amount: 4000 (Without GST)\n");
+        printf("1. Travels: 1700\n2. Foods: 1000\n3. Stays: 1300\n");
+        printf("4. Services: 300 (Not Compulsory)\n5. GST: 800\n");
+        final = 4800;
+    } else if (choice == 5) {
+        printf("You have selected GOA.\n");
+        printf("...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n");
+        printf("Total Amount: 4500 (Without GST)\n");
+        printf("1. Travels: 1700\n2. Foods: 1500\n3. Stays: 1300\n");
+        printf("4. Services: 300 (Not Compulsory)\n5. GST: 900\n");
+        final = 5400;
+    } else {
+        printf("Invalid choice. Exiting program.\n");
+        return 0;
+    }
+
+    printf("Starting Date (DDMMYYYY): ");
+    scanf("%d", &starting_date);
+
+    printf("Returning Date (DDMMYYYY): ");
+    scanf("%d", &returning_date);
+
+    printf("Number of Days: ");
+    scanf("%d", &no_of_days);
+
+    final = final * no_of_days;
+
+    printf("Extra Services Needed:\n1. YES\n2. NO\nEnter Your Choice: ");
+    scanf("%d", &answer);
+
+    if (answer == 1) {
+        final += 300;
+    }
+
+    printf("\nFinal Amount To Be Paid: %d\n", final);
+    printf("\n\n...\t\t\t\t\tThank You For Registering.\t\t\t\t\t...\n");
+
+    return 0;
 }
-printf(&quot;\n\n....\t\t\t\tTOURIST
-DESTINATIONS\t\t\t\t....\n\n&quot;);
-printf(&quot;\t\t\t\t 1. DELHI \n\t\t\t\t 2. KERALA
-
-6
-
-\n\t\t\t\t 3. ANDHRA PRADESH \n\t\t\t\t 4. KASHMIR
-\n\t\t\t\t 5. GOA \n&quot;);
-int choice;
-printf(&quot;Enter your choice : \n&quot;);
-scanf(&quot;%d&quot;,&amp;choice); if(choice==1)
-{
-printf(&quot;You have selected
-DELHI.\n\n...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n\nTotal
-Amount :- 3000(Without GST)\n1.Travels :-
-700\n2.Foods
-:- 1000\n3.Stays
-:-
-1300\n4.Services :- 300(Not
-Compulsory)\n5.GST
-final=3600;
-}
-
-7
-
-if(choice==2)
-{
-:- 600\n\n&quot;);
-printf(&quot;You have selected
-KERALA.\n\n...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n\nTo
-tal Amount :- 5000(Without GST)\n1.Travels :-
-Compulsory)\n5.GST
-final=6000;
-}
-if(choice==3)
-{
-:- 1000\n\n&quot;);
-printf(&quot;You have selected ANDHRA
-PRADESH.\n\n...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n\n
-Total Amount :- 5000(Without GST)\n1.Travels :-
-2000\n2.Foods
-:- 1400\n3.Stays
-:-
-1400\n2.Foods
-:- 1600\n3.Stays
-
-8
-
-:-
-2000\n4.Services :- 300(Not1600\n4.Services :-
-300(Not
-Compulsory)\n5.GST
-final=6000;
-}
-if(choice==4)
-{
-:- 1000\n\n&quot;);
-printf(&quot;You have selected
-KASHMIR.\n\n...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n\n
-Total Amount :- 4000(Without GST)\n1.Travels :-
-Compulsory)\n5.GST
-final=4800;
-}
-if(choice==5)
-{
-:- 800\n\n&quot;);
-printf(&quot;You have selected
-
-9
-
-GOA.\n\n...\t\t\t\t\tAMOUNT\t\t\t\t\t...\n\nTotal
-Amount :- 4500(Without GST)\n1.Travels :-
-Compulsory)\n5.GST
-final=5400;
-:- 900\n\n&quot;);
-1700\n2.Foods
-:- 1000\n3.Stays
-:-
-1300\n4.Services :- 300(Not
-1700\n2.Foods
-:- 1500\n3.Stays
-:-
-1300\n4.Services :- 300(Not}
-printf(&quot;Starting Date(DDMMYYYY) : &quot;);
-scanf(&quot;%d&quot;,&amp;starting_date);
-printf(&quot;Returning Date(DDMMYYYY) : &quot;);
-scanf(&quot;%d&quot;,&amp;returning_date); printf(&quot;Number of
-Days : &quot;); scanf(&quot;%d&quot;,&amp;no_of_days);
-
-10
-
-final=final*no_of_days;
-printf(&quot;Extra Services Needed :
-\n1.YES\n2.NO\nEnter Your Choice : &quot;);
-scanf(&quot;%d&quot;,&amp;answer); if(answer==1)
-{
-final=final+300;
-}
-printf(&quot;\nFinal Amount To Be Paid : %d\n&quot;,final);
-printf(&quot;\n\n...\t\t\t\t\tThank You For
-Registering.\t\t\t\t\t...&quot;);
-}********************************************
