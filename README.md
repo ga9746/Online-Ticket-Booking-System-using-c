@@ -22,7 +22,7 @@ Input Passenger Details:
 
 First Name, Last Name
 
-Gender, Age, Contact Number
+Gender, Age, Contact Number .
 
 Select Destination:
 Displays the total cost for each destination, broken down by category (travel, food, stay, services, and GST).
